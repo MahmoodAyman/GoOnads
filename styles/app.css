@@ -103,4 +103,20 @@ header nav .collapse .navbar-nav li ul li a.active {
 #hero #carouselExampleControls button i {
   color: #de8900;
   font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+  header nav .navbar-collapse {
+    min-height: 200px;
+  }
+  header nav .container .navbar-brand img {
+    width: 50px;
+  }
+  #hero {
+    top: -1.5%;
+  }
+  #hero #carouselExampleControls button i {
+    color: #de8900;
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=app.css.map */

@@ -115,15 +115,44 @@ header {
 
 // start hero section
 #hero {
-    position: relative;
-    height: 100vh;
-    top:-3%;
+  position: relative;
+  height: 100vh;
+  top: -3%;
   #carouselExampleControls {
     button {
-        i{
-            color: $primary-color;
-            font-size: 3rem;
+      i {
+        color: $primary-color;
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+// responsive navbar and carousel
+@media (max-width: 768px) {
+  header {
+    nav {
+      .navbar-collapse {
+        min-height: 200px;
+      }
+      .container {
+        .navbar-brand {
+          img {
+            width: 50px;
+          }
         }
+      }
+    }
+  }
+  #hero {
+    top: -1.5%;
+    #carouselExampleControls {
+      button {
+        i {
+          color: $primary-color;
+          font-size: 1rem;
+        }
+      }
     }
   }
 }
