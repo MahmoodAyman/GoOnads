@@ -115,6 +115,9 @@ header {
 
 // start hero section
 #hero {
+    position: relative;
+    height: 100vh;
+    top:-3%;
   #carouselExampleControls {
     button {
         i{

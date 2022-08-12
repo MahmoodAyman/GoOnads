@@ -95,6 +95,11 @@ header nav .collapse .navbar-nav li ul li a.active {
   color: #de8900;
 }
 
+#hero {
+  position: relative;
+  height: 100vh;
+  top: -3%;
+}
 #hero #carouselExampleControls button i {
   color: #de8900;
   font-size: 3rem;
