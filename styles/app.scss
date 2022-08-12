@@ -47,7 +47,7 @@ body {
 }
 // header
 header {
-width:100%;
+  width: 100%;
   transition: background-color 0.3s ease-in-out;
   &.navbar-scroll {
     background-color: white;
@@ -109,6 +109,18 @@ width:100%;
           }
         }
       }
+    }
+  }
+}
+
+// start hero section
+#hero {
+  #carouselExampleControls {
+    button {
+        i{
+            color: $primary-color;
+            font-size: 3rem;
+        }
     }
   }
 }

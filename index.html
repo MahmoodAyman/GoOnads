@@ -17,8 +17,9 @@
     <title>Go On</title>
   </head>
   <body>
+    <!-- start header and navigation -->
     <header id="header" class="sticky-top">
-      <nav  class="navbar navbar-expand-lg navbar-light sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img class="img-fluid" src="images/Logo.png" alt="logo" />
@@ -79,6 +80,53 @@
         </div>
       </nav>
     </header>
+    <!-- end header and navigation -->
+
+    <!-- start hero section -->
+
+    <section id="hero">
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/hero slideshow/1.jpeg" class="d-block w-100" alt="خدماتنا" />
+          </div>
+          <div class="carousel-item">
+            <img src="images/hero slideshow/2.jpeg" class="d-block w-100" alt="خدماتنا" />
+          </div>
+          <div class="carousel-item">
+            <img src="images/hero slideshow/3.jpeg" class="d-block w-100" alt="خدماتنا" />
+          </div>
+          <div class="carousel-item">
+            <img src="images/hero slideshow/4.jpeg" class="d-block w-100" alt="خدماتنا" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+        <i class="fa-solid fa-angle-left"></i>
+          <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+        <i class="fa-solid fa-angle-right"></i>
+          <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!-- end landingsection -->
     <script src="scripts/app.js"></script>
     <script src="scripts/bootstrap.bundle.js"></script>
   </body>
