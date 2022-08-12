@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #de8900;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c87b00;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  margin: auto;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 4000px;
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+header.navbar-scroll {
+  background-color: white;
+  border-bottom: 2px solid #de8900;
+}
+header nav .navbar-toggler:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+header nav .container .navbar-brand img {
+  width: 100px;
+}
+header nav .collapse .navbar-nav li {
+  padding: 0 10px;
+  font-weight: 500;
+}
+header nav .collapse .navbar-nav li a {
+  padding: 7px;
+  border-radius: 25px;
+  color: #616161;
+}
+header nav .collapse .navbar-nav li a:hover {
+  color: #de8900 !important;
+}
+header nav .collapse .navbar-nav li a.active {
+  background-color: #de8900;
+  color: white;
+}
+header nav .collapse .navbar-nav li a.active:hover {
+  color: white !important;
+}
+header nav .collapse .navbar-nav li .dropdown-menu[data-bs-popper] {
+  left: -75%;
+}
+header nav .collapse .navbar-nav li ul {
+  text-align: right;
+}
+header nav .collapse .navbar-nav li ul li a {
+  padding: 7px;
+  border-radius: 0;
+  color: #616161;
+}
+header nav .collapse .navbar-nav li ul li a:hover {
+  background-color: #de8900;
+  color: white !important;
+}
+header nav .collapse .navbar-nav li ul li a.active {
+  color: #de8900;
+}/*# sourceMappingURL=app.css.map */

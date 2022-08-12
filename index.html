@@ -1,12 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/bootstrap.css" />
+    <link rel="stylesheet" href="styles/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="images/Logo.png" type="image/x-icon" />
     <title>Go On</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header id="header" class="sticky-top">
+      <nav  class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img class="img-fluid" src="images/Logo.png" alt="logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">من نحن</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  خدماتنا
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">مطبوعات</a></li>
+                  <li><a class="dropdown-item" href="#">لافتات</a></li>
+                  <li><a class="dropdown-item" href="#">تسويق الكتروني</a></li>
+                  <li><a class="dropdown-item" href="#">هدايا دعائية</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >خدمات المعارض والمؤتمرات</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">تصميم المواقع</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">حفر وتقطيع الليزر</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">اتصل بنا</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/bootstrap.bundle.js"></script>
+  </body>
 </html>

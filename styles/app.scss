@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;800;900&display=swap");
+
+// global rules
+
+// colors
+$primary-color: #de8900;
+$secondary-color: #616161;
+$hover-color: #c87b00;
+
+// margin and padding
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+// scroll bar
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: $primary-color;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $hover-color;
+}
+
+// links and lists
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  margin: auto;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 4000px;
+  margin: auto;
+}
+// header
+header {
+width:100%;
+  transition: background-color 0.3s ease-in-out;
+  &.navbar-scroll {
+    background-color: white;
+    border-bottom: 2px solid $primary-color;
+  }
+  nav {
+    .navbar-toggler:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+    .container {
+      .navbar-brand {
+        img {
+          width: 100px;
+        }
+      }
+    }
+    .collapse {
+      .navbar-nav {
+        li {
+          padding: 0 10px;
+          font-weight: 500;
+          a {
+            padding: 7px;
+            border-radius: 25px;
+            color: $secondary-color;
+            &:hover {
+              color: $primary-color !important;
+            }
+            &.active {
+              background-color: $primary-color;
+
+              color: white;
+              &:hover {
+                color: white !important;
+              }
+            }
+          }
+          .dropdown-menu[data-bs-popper] {
+            left: -75%;
+          }
+          ul {
+            text-align: right;
+            li {
+              a {
+                padding: 7px;
+                border-radius: 0;
+                color: $secondary-color;
+                &:hover {
+                  background-color: $primary-color;
+                  color: white !important;
+                }
+                &.active {
+                  color: $primary-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
