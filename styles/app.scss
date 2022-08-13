@@ -130,28 +130,103 @@ header {
 
 //  start slogan section
 #slogan {
+  height: 50vh;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
   .container {
-    .row {
-        text-align: center;
-        line-height: 4;
+    .row{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row-reverse;
+    .slogan__text {
+      text-align: center;
+      line-height: 4;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       h1 {
-        font-size: 5rem;
-        font-weight: 500;
+        font-size: 7rem;
+        font-weight: 700;
         color: $primary-color;
-        span{
-            font-size: 5rem;
-            font-weight: 500;
-            color: $secondary-color;
+      }
+      p {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $secondary-color;
+      }
+      a{
+        font-size: 1rem;
+        font-weight: 500;
+        color: white;
+        background-color: $primary-color;
+        padding: 5px 60px;
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: $hover-color;
         }
       }
-      span {
-        font-size: 2rem;
-        font-weight: 500;
-        color: $secondary-color;
+    }
+    .slogan__image {
+      display: block;
+      margin:auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// responsive large screen
+@media (max-width: 1200px) {
+  #hero {
+    height: 100vh;
+    top: -3%;
+  }
+  #slogan {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .container {
+      .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      flex-direction: row-reverse;
+      .slogan__text {
+        text-align: center;
+        line-height: 4;
+        display: flex;
+        flex-direction: column;
+        h1 {
+          font-size: 5rem;
+          font-weight: 700;
+          color: $primary-color;
+        }
+        p {
+          font-size: 2rem;
+          font-weight: 600;
+          color: $secondary-color;
+        }
+      }
+      .slogan__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+        }
       }
     }
   }
@@ -175,12 +250,44 @@ header {
   }
   #hero {
     top: -1.5%;
+    height: 385px;
     #carouselExampleControls {
       button {
         i {
           color: $primary-color;
           font-size: 1rem;
         }
+      }
+    }
+  }
+  #slogan {
+    height: 50vh;
+    .container {
+
+      .slogan__text {
+        align-items: center;
+        h1 {
+          font-size: 5rem;
+          font-weight: 500;
+          color: $primary-color;
+        }
+        p {
+          font-size: 2rem;
+          font-weight: 500;
+          color: $secondary-color;
+        }
+        a{
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: white;
+          background-color: $primary-color;
+          border-radius: 25px;
+        }
+      }
+    }
+    .slogan__image {
+      img {
+        width: 100%;
       }
     }
   }
