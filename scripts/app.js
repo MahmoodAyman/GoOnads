@@ -8,7 +8,7 @@ navbarToggler.addEventListener("click", function () {
 
 // navbar background change on scroll
 window.onscroll = function () {
-  if (window.scrollY >= 150 || window.pageYOffset >= 150) {
+  if (window.scrollY >= 60 || window.pageYOffset >= 60) {
     header.classList.add("navbar-scroll");
   } else {
     header.classList.remove("navbar-scroll");
@@ -41,8 +41,8 @@ var testim = document.getElementById("reviews__slider"),
   reviewContent = Array.prototype.slice.call(
     document.getElementById("review-content").children
   ),
-  testimLeftArrow = document.getElementById("left-arrow"),
-  testimRightArrow = document.getElementById("right-arrow"),
+  leftArrow = document.getElementById("left-arrow"),
+  rightArrow = document.getElementById("right-arrow"),
   testimSpeed = 4500,
   currentSlide = 0,
   currentActive = 0,
@@ -82,15 +82,15 @@ window.onload = function () {
     }, testimSpeed);
   }
 
-  testimLeftArrow.addEventListener("click", function () {
-    playSlide((currentSlide -= 1));
-  });
-
-  testimRightArrow.addEventListener("click", function () {
+  leftArrow.addEventListener("click", function () {
     playSlide((currentSlide += 1));
   });
 
-  for (var l = 0; l < reviewDot.length; l++) {
+  rightArrow.addEventListener("click", function () {
+    playSlide((currentSlide -= 1));
+  });
+
+  for (var l = reviewDot.length - 1; l >= 0; l--) {
     reviewDot[l].addEventListener("click", function () {
       playSlide((currentSlide = reviewDot.indexOf(this)));
     });
@@ -102,15 +102,15 @@ window.onload = function () {
   document.addEventListener("keyup", function (e) {
     switch (e.keyCode) {
       case 37:
-        testimLeftArrow.click();
+        leftArrow.click();
         break;
 
       case 39:
-        testimRightArrow.click();
+        rightArrow.click();
         break;
 
       case 39:
-        testimRightArrow.click();
+        rightArrow.click();
         break;
 
       default:
@@ -124,17 +124,11 @@ window.onload = function () {
 
   testim.addEventListener("touchend", function (e) {
     touchEndPos = e.changedTouches[0].clientX;
-
     touchPosDiff = touchStartPos - touchEndPos;
-
-    console.log(touchPosDiff);
-    console.log(touchStartPos);
-    console.log(touchEndPos);
-
     if (touchPosDiff > 0 + ignoreTouch) {
-      testimLeftArrow.click();
+      leftArrow.click();
     } else if (touchPosDiff < 0 - ignoreTouch) {
-      testimRightArrow.click();
+      rightArrow.click();
     } else {
       return;
     }
