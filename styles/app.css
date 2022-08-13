@@ -105,6 +105,32 @@ header nav .collapse .navbar-nav li ul li a.active {
   font-size: 3rem;
 }
 
+#slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#slogan .container .row {
+  text-align: center;
+  line-height: 4;
+}
+#slogan .container .row h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  color: #de8900;
+}
+#slogan .container .row h1 span {
+  font-size: 5rem;
+  font-weight: 500;
+  color: #616161;
+}
+#slogan .container .row span {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #616161;
+}
+
 @media (max-width: 768px) {
   header nav .navbar-collapse {
     min-height: 200px;

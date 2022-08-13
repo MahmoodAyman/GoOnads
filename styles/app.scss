@@ -128,6 +128,35 @@ header {
   }
 }
 
+//  start slogan section
+#slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .container {
+    .row {
+        text-align: center;
+        line-height: 4;
+      h1 {
+        font-size: 5rem;
+        font-weight: 500;
+        color: $primary-color;
+        span{
+            font-size: 5rem;
+            font-weight: 500;
+            color: $secondary-color;
+        }
+      }
+      span {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
 // responsive navbar and carousel
 @media (max-width: 768px) {
   header {
