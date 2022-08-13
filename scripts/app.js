@@ -8,7 +8,7 @@ navbarToggler.addEventListener("click", function () {
 
 // navbar background change on scroll
 window.onscroll = function () {
-  if (window.scrollY >= 60 || window.pageYOffset >= 60) {
+  if (window.scrollY >= 150 || window.pageYOffset >= 150) {
     header.classList.add("navbar-scroll");
   } else {
     header.classList.remove("navbar-scroll");
