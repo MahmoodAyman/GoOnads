@@ -23,7 +23,7 @@ window.addEventListener("scroll", function () {
     let windowHeight = window.innerHeight;
     let scrollTop = reveals[i].getBoundingClientRect().top;
     let scrollBottom = scrollTop + reveals[i].clientHeight;
-    if (scrollTop <= windowHeight-150) {
+    if (scrollTop <= windowHeight) {
       reveals[i].classList.add("reveal-active");
     }
     else {
