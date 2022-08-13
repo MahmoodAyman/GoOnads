@@ -70,8 +70,9 @@ header {
       .navbar-nav {
         li {
           padding: 0 10px;
-          font-weight: 500;
+
           a {
+            font-weight: 600;
             padding: 7px;
             border-radius: 25px;
             color: $secondary-color;
@@ -130,13 +131,13 @@ header {
 
 //  start slogan section
 #slogan {
-  height: 50vh;
+  height: 70vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   .container {
-    .row{
+    .row {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -157,7 +158,7 @@ header {
         font-weight: 600;
         color: $secondary-color;
       }
-      a{
+      a {
         font-size: 1rem;
         font-weight: 600;
         color: white;
@@ -172,7 +173,7 @@ header {
     }
     .slogan__image {
       display: flex;
-      justify-content: flex-start ;
+      justify-content: flex-start;
       img {
         width: 100%;
       }
@@ -183,11 +184,11 @@ header {
 // responsive large screen
 @media (max-width: 1200px) {
   #hero {
-    height: 100vh;
+    height: 95vh;
     top: -3%;
   }
   #slogan {
-    height: 5vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -250,7 +251,6 @@ header {
   #slogan {
     height: 95vh;
     .container {
-
       .slogan__text {
         align-items: center;
         h1 {
@@ -263,7 +263,7 @@ header {
           font-weight: 700;
           color: $secondary-color;
         }
-        a{
+        a {
           font-size: 1.5rem;
           font-weight: 600;
           color: white;
@@ -279,3 +279,25 @@ header {
     }
   }
 }
+// sections reveals
+#slogan {
+  overflow-x: hidden;
+  .slogan__text {
+    position: relative;
+    left: 100%;
+    transition: all 2s ease-in-out;
+    &.reveal-active {
+      left: 0;
+    }
+  }
+  .slogan__image {
+    position: relative;
+    right: 100%;
+    transition: all 2s ease-in-out;
+    &.reveal-active {
+      right: 0;
+    }
+  }
+}
+
+// keyframes
