@@ -231,6 +231,7 @@ header nav .collapse .navbar-nav li ul li a.active {
 }
 #slogan {
   overflow-x: hidden;
+  margin-top: -8%;
 }
 #slogan .slogan__text h1 {
   position: relative;
@@ -271,13 +272,109 @@ header nav .collapse .navbar-nav li ul li a.active {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #616161;
   text-align: center;
-  margin: 2rem 0;
+  margin: 3rem auto;
+  padding: 10px 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1;
+  position: relative;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #de8900;
+  border-radius: 50%;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.title::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #de8900;
+  border-radius: 50%;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.title:hover {
+  color: white;
+  transition: color 0.3s linear;
+  transition-delay: 0.5s;
+}
+.title:hover::after {
+  z-index: -1;
+  -webkit-animation: leftanimation 1s linear forwards;
+          animation: leftanimation 1s linear forwards;
+}
+.title:hover::before {
+  z-index: -1;
+  -webkit-animation: rightanimation 1s linear forwards;
+          animation: rightanimation 1s linear forwards;
 }
 
+@-webkit-keyframes leftanimation {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+}
+
+@keyframes leftanimation {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+}
+@-webkit-keyframes rightanimation {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    right: 0;
+  }
+}
+@keyframes rightanimation {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    right: 0;
+  }
+}
 .wrapper {
   width: 90%;
   margin: 0 auto;
@@ -324,8 +421,8 @@ header nav .collapse .navbar-nav li ul li a.active {
 }
 
 .back {
-  background: #cedce7;
-  background: linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+  background: #a0aab1;
+  background: linear-gradient(45deg, #a0aab1 0%, #616161 100%);
 }
 
 .front:after {
@@ -372,6 +469,7 @@ header nav .collapse .navbar-nav li ul li a.active {
   background-color: #de8900;
   padding: 3px 10px;
   border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
 }
 .inner .show__more:hover {
   background-color: #616161;
