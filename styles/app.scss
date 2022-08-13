@@ -134,16 +134,13 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   .container {
     .row{
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    flex-direction: row-reverse;
     .slogan__text {
       text-align: center;
       line-height: 4;
@@ -162,7 +159,7 @@ header {
       }
       a{
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: 600;
         color: white;
         background-color: $primary-color;
         padding: 5px 60px;
@@ -174,8 +171,8 @@ header {
       }
     }
     .slogan__image {
-      display: block;
-      margin:auto;
+      display: flex;
+      justify-content: flex-start ;
       img {
         width: 100%;
       }
@@ -190,24 +187,17 @@ header {
     top: -3%;
   }
   #slogan {
-    height: 50vh;
+    height: 5vh;
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
     .container {
-      .row{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      display: flex;
-      align-items: center;
-      justify-content:center;
-      flex-direction: row-reverse;
       .slogan__text {
-        text-align: center;
         line-height: 4;
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         h1 {
           font-size: 5rem;
@@ -221,9 +211,6 @@ header {
         }
       }
       .slogan__image {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         img {
           width: 100%;
         }
@@ -261,24 +248,24 @@ header {
     }
   }
   #slogan {
-    height: 50vh;
+    height: 95vh;
     .container {
 
       .slogan__text {
         align-items: center;
         h1 {
           font-size: 5rem;
-          font-weight: 500;
+          font-weight: 700;
           color: $primary-color;
         }
         p {
           font-size: 2rem;
-          font-weight: 500;
+          font-weight: 700;
           color: $secondary-color;
         }
         a{
           font-size: 1.5rem;
-          font-weight: 500;
+          font-weight: 600;
           color: white;
           background-color: $primary-color;
           border-radius: 25px;

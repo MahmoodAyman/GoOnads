@@ -110,12 +110,7 @@ header nav .collapse .navbar-nav li ul li a.active {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-#slogan .container {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: row-reverse;
 }
 #slogan .container .row {
   display: flex;
@@ -141,7 +136,7 @@ header nav .collapse .navbar-nav li ul li a.active {
 }
 #slogan .container .slogan__text a {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   color: white;
   background-color: #de8900;
   padding: 5px 60px;
@@ -152,8 +147,8 @@ header nav .collapse .navbar-nav li ul li a.active {
   background-color: #c87b00;
 }
 #slogan .container .slogan__image {
-  display: block;
-  margin: auto;
+  display: flex;
+  justify-content: flex-start;
 }
 #slogan .container .slogan__image img {
   width: 100%;
@@ -165,26 +160,17 @@ header nav .collapse .navbar-nav li ul li a.active {
     top: -3%;
   }
   #slogan {
-    height: 50vh;
+    height: 5vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  #slogan .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row-reverse;
-  }
-  #slogan .container .row {
     display: flex;
     align-items: center;
     justify-content: center;
   }
   #slogan .container .slogan__text {
-    text-align: center;
     line-height: 4;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
   #slogan .container .slogan__text h1 {
@@ -196,11 +182,6 @@ header nav .collapse .navbar-nav li ul li a.active {
     font-size: 2rem;
     font-weight: 600;
     color: #616161;
-  }
-  #slogan .container .slogan__image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   #slogan .container .slogan__image img {
     width: 100%;
@@ -222,24 +203,24 @@ header nav .collapse .navbar-nav li ul li a.active {
     font-size: 1rem;
   }
   #slogan {
-    height: 50vh;
+    height: 95vh;
   }
   #slogan .container .slogan__text {
     align-items: center;
   }
   #slogan .container .slogan__text h1 {
     font-size: 5rem;
-    font-weight: 500;
+    font-weight: 700;
     color: #de8900;
   }
   #slogan .container .slogan__text p {
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 700;
     color: #616161;
   }
   #slogan .container .slogan__text a {
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
     color: white;
     background-color: #de8900;
     border-radius: 25px;
