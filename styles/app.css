@@ -37,7 +37,7 @@ body {
   margin: auto;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  height: 4000px;
+  height: 3000px;
   margin: auto;
 }
 
@@ -231,7 +231,7 @@ header nav .collapse .navbar-nav li ul li a.active {
 }
 #slogan {
   overflow-x: hidden;
-  margin-top: -8%;
+  margin-top: -4%;
 }
 #slogan .slogan__text h1 {
   position: relative;
@@ -831,4 +831,77 @@ header nav .collapse .navbar-nav li ul li a.active {
   .reviews__slider .cont div p {
     line-height: 25px;
   }
+}
+footer {
+  border-top: 2px solid #de8900;
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+  color: #de8900;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  overflow-x: hidden;
+}
+footer .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .logo p {
+  color: #616161;
+  margin-top: 5px;
+}
+footer .contact__us .contacts {
+  display: flex;
+  flex-direction: column;
+}
+footer .contact__us .contacts .contact__method {
+  cursor: pointer !important;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+footer .contact__us .contacts .contact__method i {
+  margin-right: 10px;
+  cursor: pointer;
+}
+footer .contact__us .contacts .contact__method p {
+  margin-top: 15px;
+  cursor: pointer;
+}
+footer .contact__us .contacts .contact__method:hover {
+  color: #616161;
+}
+footer .contact__us .contacts .social__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+footer .contact__us .contacts .social__links .social__link i {
+  margin-right: 10px;
+  cursor: pointer;
+}
+footer .contact__us .contacts .social__links .social__link i:hover {
+  color: #616161;
+}
+footer .contact__us .contacts .social__links a:hover {
+  color: #616161;
+}
+footer .location h3 {
+  margin-bottom: 10px;
+}
+footer .credits {
+  background-color: #616161;
+  color: white;
+  font-weight: 600;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }/*# sourceMappingURL=app.css.map */

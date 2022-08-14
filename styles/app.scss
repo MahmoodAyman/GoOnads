@@ -42,7 +42,7 @@ body {
   margin: auto;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  height: 4000px;
+  height: 3000px;
   margin: auto;
 }
 // header
@@ -282,7 +282,7 @@ header {
 // sections reveals
 #slogan {
   overflow-x: hidden;
-  margin-top: -8%;
+  margin-top: -4%;
   .slogan__text {
     h1 {
       position: relative;
@@ -604,7 +604,7 @@ header {
 }
 
 .reviews__slider {
-  margin-top:100px;
+  margin-top: 100px;
   width: 100%;
   .wrap {
     transform: translateY(250px);
@@ -837,5 +837,89 @@ header {
   }
 }
 
-
 // styles for the contact section
+
+// styles for the footer section
+footer {
+  border-top: 2px solid $primary-color;
+  width: 100%;
+  // overflow-x:hidden ;
+  margin: 10px 0;
+  text-align: center;
+  color: $primary-color;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p{
+      color:$secondary-color;
+      margin-top: 5px;
+    }
+  }
+  .contact__us {
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      .contact__method {
+        i {
+          margin-right: 10px;
+          cursor: pointer;
+        }
+        p {
+          margin-top: 15px;
+          cursor: pointer;
+        }
+        cursor: pointer !important;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+      .social__links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        .social__link {
+          i {
+            margin-right: 10px;
+            cursor: pointer;
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+        a{
+          // cursor: pointer;
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+  .location {
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+  .credits{
+    background-color: $secondary-color;
+    color:white;
+    font-weight: 600;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  overflow-x: hidden;
+}
