@@ -1074,3 +1074,52 @@ footer {
     }
   }
 }
+
+// start contact us page
+main{
+  .container{
+    .row{
+      .contact__methods{
+        width:100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap ;
+        .method{
+          min-width: 30%;
+          background-color: white;
+          border-radius: 15px;
+          box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+          margin-left:20px;
+          margin-bottom:20px;
+          margin-top:20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          .method__title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:10px;
+            span{
+              color:$primary-color;
+              font-size: 2em;
+              font-weight: bold;
+              margin-bottom: 10px;
+            }
+            i{
+              color:$primary-color;
+              padding:15px;
+              border-radius: 10px;
+              font-size: 1.5em;
+              margin-bottom: 10px;
+              margin-left: 10px;
+              background-color:#fbd18d;
+            }
+          }
+        }
+      }
+    }
+  }
+}
