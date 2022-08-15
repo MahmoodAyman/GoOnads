@@ -10,6 +10,7 @@ form.addEventListener("submit", function (e) {
   });
   var json = JSON.stringify(object);
   result.innerHTML = "من فضلك انتظر...";
+  result.classList.add("progress");
 
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
@@ -22,8 +23,9 @@ form.addEventListener("submit", function (e) {
     .then(async (response) => {
       let json = await response.json();
       if (response.status == 200) {
-        result.innerHTML = json.message;
         result.classList.add("success");
+        result.innerHTML = "تم الإرسال بنجاح شكرا لك سنحاول الرد عليك في أقرب وقت ممكن";
+        
       } else {
         console.log(response);
         result.innerHTML = json.message;
@@ -39,6 +41,7 @@ form.addEventListener("submit", function (e) {
       setTimeout(() => {
         result.classList.remove("success");
         result.classList.remove("error");
+        result.classList.remove("progress");
         result.style.display = "none";
       }, 3000);
     });

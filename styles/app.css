@@ -1240,7 +1240,7 @@ main .container .row #result.success {
   margin-bottom: 10px;
 }
 main .container .row #result.error {
-  color: #fe346e;
+  color: #fe3434;
   padding: 10px;
   border-radius: 10px;
   width: 100%;
@@ -1251,4 +1251,19 @@ main .container .row #result.error {
   font-weight: 500;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+main .container .row #result.progress {
+  color: #de8900;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+  text-align: center;
 }/*# sourceMappingURL=app.css.map */
