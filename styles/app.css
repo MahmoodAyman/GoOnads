@@ -1224,4 +1224,31 @@ main .container .contact__form button:hover {
   background-color: white;
   border: 1px solid #de8900;
   color: #de8900;
+}
+
+main .container .row #result.success {
+  color: #de8900;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+main .container .row #result.error {
+  color: #fe346e;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=app.css.map */

@@ -127,14 +127,19 @@
               <div class="col-lg-5 col-md-8 reveals">
                 <!-- contact us form -->
                 <div class="main__title">اسأل عن شيء</div>
-                <form action="https://api.web3forms.com/submit" class="contact__form" method="POST">
-                  <input type="hidden" name="apikey" value="6c435af3-1181-4e3c-bc95-ed00028695d3">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="الاسم" required>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="الايميل" required>
-                    <textarea class="form-control" id="message" name="message" rows="3" placeholder="الرسالة" required></textarea>
-                    
-                  <button id="form__submit" type="submit">إرسال</button>
-                </form>
+
+                <form method="POST" id="form" class="contact__form">
+                  <input type="hidden" name="access_key" value="6c435af3-1181-4e3c-bc95-ed00028695d3">
+                  <input type="hidden" name="subject" value="New message from Go On Website">
+                  <input type="checkbox" name="botcheck" id="" style="display: none;">
+              
+                  <!-- Custom Form Data -->
+                  <input type="text" class="form-control" id="name" name="name" placeholder="الاسم" required>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="الايميل" required>
+                  <textarea class="form-control" id="message" name="message" rows="3" placeholder="الرسالة" required></textarea>
+                  <button id="form__submit" type="submit">ارسال</button>
+              </form>
+              <div id="result"></div>
               </div>
               <div class="col-lg-5 col-md-8 reveals">
                 <div class="main__title">تفضل بزيارتنا</div>
@@ -194,6 +199,7 @@
           <p>جميع الحقوق محفوظة لدي Go ON &copy; </p>
         </div>
       </footer>
+      <script src="../scripts/contactForm.js"></script>
       <script src="../scripts/app.js"></script>
       <script src="../scripts/bootstrap.bundle.js"></script>
   </body>

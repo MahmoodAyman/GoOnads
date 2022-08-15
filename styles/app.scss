@@ -1272,3 +1272,40 @@ main {
     }
   }
 }
+
+
+// results of contact us form 
+main{
+  .container{
+    .row{
+      #result{
+        &.success{
+          color: $primary-color;
+          padding: 10px;
+          border-radius: 10px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.2rem;
+          font-weight: 500;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        &.error{
+          color: #fe346e;
+          padding: 10px;
+          border-radius: 10px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.2rem;
+          font-weight: 500;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
