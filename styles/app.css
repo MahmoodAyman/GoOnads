@@ -1183,37 +1183,30 @@ main .container .contact__form {
   flex-direction: column;
   justify-content: flex-start;
 }
-main .container .contact__form .form-group {
-  padding: 10px;
-}
-main .container .contact__form .form-group label {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #616161;
-}
-main .container .contact__form .form-group input,
-main .container .contact__form .form-group textarea {
+main .container .contact__form input,
+main .container .contact__form textarea {
   border-radius: 10px;
   border: 1px solid #616161;
   padding: 10px;
+  margin: 10px;
   font-size: 1.2rem;
   font-weight: 500;
   background-color: #e3e1e1;
 }
-main .container .contact__form .form-group input:focus,
-main .container .contact__form .form-group textarea:focus {
+main .container .contact__form input:focus,
+main .container .contact__form textarea:focus {
   border: 1px solid #de8900;
   outline: none;
   box-shadow: 0px 0px 10px rgba(222, 137, 0, 0.5);
 }
-main .container .contact__form .form-group input::-moz-placeholder, main .container .contact__form .form-group textarea::-moz-placeholder {
+main .container .contact__form input::-moz-placeholder, main .container .contact__form textarea::-moz-placeholder {
   color: #616161;
 }
-main .container .contact__form .form-group input:-ms-input-placeholder, main .container .contact__form .form-group textarea:-ms-input-placeholder {
+main .container .contact__form input:-ms-input-placeholder, main .container .contact__form textarea:-ms-input-placeholder {
   color: #616161;
 }
-main .container .contact__form .form-group input::placeholder,
-main .container .contact__form .form-group textarea::placeholder {
+main .container .contact__form input::placeholder,
+main .container .contact__form textarea::placeholder {
   color: #616161;
 }
 main .container .contact__form button {

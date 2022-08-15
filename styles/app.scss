@@ -1232,18 +1232,13 @@ main {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      .form-group {
-        padding: 10px;
-        label {
-          font-size: 1.2rem;
-          font-weight: 500;
-          color: $secondary-color;
-        }
+      // .form-group {
         input,
         textarea {
           border-radius: 10px;
           border: 1px solid $secondary-color;
           padding: 10px;
+          margin:10px;
           font-size: 1.2rem;
           font-weight: 500;
           background-color: #e3e1e1;
@@ -1257,7 +1252,7 @@ main {
             color: $secondary-color;
           }
         }
-      }
+      // }
       button {
         margin-right: 10px;
         width: 25%;

@@ -126,20 +126,13 @@
               <div class="row">
               <div class="col-lg-5 col-md-8 reveals">
                 <!-- contact us form -->
-                <div class="main__title">اسأل عن حاجة</div>
-                <form class="contact__form ">
-                  <div class="form-group">
-                    <label for="name">الاسم</label>
+                <div class="main__title">اسأل عن شيء</div>
+                <form action="https://api.web3forms.com/submit" class="contact__form" method="POST">
+                  <input type="hidden" name="apikey" value="6c435af3-1181-4e3c-bc95-ed00028695d3">
                     <input type="text" class="form-control" id="name" name="name" placeholder="الاسم" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">الايميل</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="البريد الالكتروني" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="message">الرسالة</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="الايميل" required>
                     <textarea class="form-control" id="message" name="message" rows="3" placeholder="الرسالة" required></textarea>
-                  </div>
+                    
                   <button id="form__submit" type="submit">إرسال</button>
                 </form>
               </div>

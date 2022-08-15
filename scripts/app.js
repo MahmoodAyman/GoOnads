@@ -23,7 +23,7 @@ window.addEventListener("scroll", function () {
     let windowHeight = window.innerHeight;
     let scrollTop = reveals[i].getBoundingClientRect().top;
     let scrollBottom = scrollTop + reveals[i].clientHeight;
-    if (scrollTop <= windowHeight -150) {
+    if (scrollTop <= windowHeight+150) {
       reveals[i].classList.add("reveal-active");
     } else {
       reveals[i].classList.remove("reveal-active");
@@ -136,43 +136,3 @@ window.onload = function () {
 };
 
 // send email
-let emailAddress = document.getElementById("email");
-let mailMessage = document.getElementById("message");
-let mailsender = document.getElementById("name");
-let mailSubmission = document.getElementById("form__submit");
-mailSubmission.addEventListener("click", function sendEmail(evt) {
-  evt.preventDefault();
-  let ElasticEmail = require("@elasticemail/elasticemail-client");
-
-  let defaultClient = ElasticEmail.ApiClient.instance;
-
-  let apikey = defaultClient.authentications["apikey"];
-  apikey.apiKey =
-    "1B7DACCFCDBA542A492B862D5323D7C98B0556D32A514AF0B0ED3992E0C97EB2488EA6FB02C377C397C0DE98797DDDB3";
-
-  let api = new ElasticEmail.EmailsApi();
-
-  let email = ElasticEmail.EmailMessageData.constructFromObject({
-    Recipients: [new ElasticEmail.EmailRecipient("goonadv686@gmail.com")],
-    Content: {
-      Body: [
-        ElasticEmail.BodyPart.constructFromObject({
-          ContentType: "text/plain",
-          Content: mailMessage.value,
-        }),
-      ],
-      Subject: `sent from ${mailsender.value}`,
-      From: emailAddress.value,
-    },
-  });
-
-  var callback = function (error, data, response) {
-    if (error) {
-      console.error(error);
-    } else {
-      console.log("API called successfully.");
-    }
-  };
-  api.emailsPost(email, callback);
-});
-
