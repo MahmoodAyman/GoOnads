@@ -154,7 +154,7 @@ header {
         font-size: 7rem;
         font-weight: 700;
         color: $primary-color;
-        span{
+        span {
           color: $secondary-color;
         }
       }
@@ -176,8 +176,7 @@ header {
         transition: all 0.3s ease-in-out;
         &:hover {
           background-color: $secondary-color;
-          color:$primary-color;
-
+          color: $primary-color;
         }
       }
     }
@@ -431,9 +430,11 @@ header {
   max-width: calc(25% - 2rem);
   margin: 1rem;
   cursor: pointer;
+  opacity: 0;
   transform: translateY(250px);
-  transition: transform 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
   &.reveal-active {
+    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -617,9 +618,11 @@ header {
   margin-top: 100px;
   width: 100%;
   .wrap {
+    opacity: 0;
     transform: translateY(250px);
-    transition: transform 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
     &.reveal-active {
+      opacity: 1;
       transform: translateY(0);
     }
   }
@@ -1074,7 +1077,7 @@ footer {
             border-radius: 10px;
           }
           &:hover {
-            transform: scale(1.4);
+            transform: scale(1.8);
           }
         }
       }
@@ -1085,12 +1088,14 @@ footer {
 // start contact us page
 main {
   .container {
-      .revelas {
-        transform: translateY(200px);
-        transition: all 0.3s ease-in-out;
-        &.reveal-active {
-          transform: translateY(0);
-        }
+    .revelas {
+      opacity: 0;
+      transform: translateY(150px);
+      transition: all 0.3s ease-in-out;
+      &.reveal-active {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     .row {
       .contact__methods {
@@ -1242,25 +1247,25 @@ main {
       flex-direction: column;
       justify-content: flex-start;
       // .form-group {
-        input,
-        textarea {
-          border-radius: 10px;
-          border: 1px solid $secondary-color;
-          padding: 10px;
-          margin:10px;
-          font-size: 1.2rem;
-          font-weight: 500;
-          background-color: #e3e1e1;
-          &:focus {
-            border: 1px solid $primary-color;
-            outline: none;
-            // shadow
-            box-shadow: 0px 0px 10px rgba(222, 137, 0, 0.5);
-          }
-          &::placeholder {
-            color: $secondary-color;
-          }
+      input,
+      textarea {
+        border-radius: 10px;
+        border: 1px solid $secondary-color;
+        padding: 10px;
+        margin: 10px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        background-color: #e3e1e1;
+        &:focus {
+          border: 1px solid $primary-color;
+          outline: none;
+          // shadow
+          box-shadow: 0px 0px 10px rgba(222, 137, 0, 0.5);
         }
+        &::placeholder {
+          color: $secondary-color;
+        }
+      }
       // }
       button {
         margin-right: 10px;
@@ -1282,13 +1287,12 @@ main {
   }
 }
 
-
-// results of contact us form 
-main{
-  .container{
-    .row{
-      #result{
-        &.success{
+// results of contact us form
+main {
+  .container {
+    .row {
+      #result {
+        &.success {
           color: $primary-color;
           padding: 10px;
           border-radius: 10px;
@@ -1301,7 +1305,7 @@ main{
           margin-top: 10px;
           margin-bottom: 10px;
         }
-        &.error{
+        &.error {
           color: #fe3434;
           padding: 10px;
           border-radius: 10px;
@@ -1314,7 +1318,7 @@ main{
           margin-top: 10px;
           margin-bottom: 10px;
         }
-        &.progress{
+        &.progress {
           color: $primary-color;
           padding: 10px;
           border-radius: 10px;
@@ -1333,3 +1337,83 @@ main{
     }
   }
 }
+
+// start main section in about us page
+
+main {
+  overflow: hidden;
+  .container {
+    .row {
+      .about__title {
+        h1 {
+          font-size: 2rem;
+          font-weight: bold;
+          color: $primary-color;
+        }
+        transform: translateY(150px);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        &.reveal-active {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+    }
+    .about__us {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .about__us__block {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .block__title{
+          text-align: right;
+          font-size: 1.3rem;
+          font-weight: 700;
+          color:$secondary-color;
+        }
+        .about__us__1__text {
+          padding: 10px;
+          font-size: 1.2rem;
+          text-align: right;
+          line-height: 2;
+          border-radius: 15px;
+          position: relative;
+          left:100%;
+          transition: all 1s ease-in-out;
+          &.reveal-active{
+            left:0;
+          }
+        }
+        .about__us__1__pic {
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(222, 137, 0, 0.5);
+          }
+          position: relative;
+          right:100%;
+          transition: all 1s ease-in-out;
+          &.reveal-active{
+            right:0;
+          }
+        }
+      }
+      &::nth-child(1) {
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+  }
+}
+
+
