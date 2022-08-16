@@ -116,32 +116,39 @@ header nav .collapse .navbar-nav li ul li a.active {
 }
 #slogan .container .slogan__text {
   text-align: center;
-  line-height: 4;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 #slogan .container .slogan__text h1 {
+  line-height: 2;
   font-size: 7rem;
   font-weight: 700;
   color: #de8900;
+}
+#slogan .container .slogan__text h1 span {
+  color: #616161;
 }
 #slogan .container .slogan__text p {
   font-size: 2rem;
   font-weight: 600;
   color: #616161;
+  background-color: #de8900;
+  padding: 5px;
+  border-radius: 10px;
 }
 #slogan .container .slogan__text a {
   font-size: 1rem;
   font-weight: 600;
   color: white;
   background-color: #de8900;
-  padding: 5px 60px;
-  border-radius: 25px;
+  padding: 5px 15px;
+  border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
 #slogan .container .slogan__text a:hover {
-  background-color: #c87b00;
+  background-color: #616161;
+  color: #de8900;
 }
 #slogan .container .slogan__image {
   display: flex;
@@ -1032,7 +1039,7 @@ footer .credits {
   border-radius: 10px;
 }
 .service__gallery .container .row .service__gallery__content .service__gallery__item:hover {
-  transform: scale(1.8);
+  transform: scale(1.4);
 }
 
 main .container .revelas {
