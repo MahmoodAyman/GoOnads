@@ -17,19 +17,17 @@ window.onscroll = function () {
 
 // scroll reveal
 
-window.addEventListener("scroll", function () {
-  var reveals = document.querySelectorAll(".reveals");
-  for (var i = 0; i < reveals.length; i++) {
-    let windowHeight = window.innerHeight;
-    let scrollTop = reveals[i].getBoundingClientRect().top;
-    let scrollBottom = scrollTop + reveals[i].clientHeight;
-    if (scrollTop <= windowHeight-150) {
-      reveals[i].classList.add("reveal-active");
-    } else {
-      reveals[i].classList.remove("reveal-active");
+  window.addEventListener("scroll", function () {
+    let revealElements = document.querySelectorAll(".reveals");
+    for (let i = 0; i < revealElements.length; i++) {
+      let revealElement = revealElements[i];
+      let bounds = revealElement.getBoundingClientRect();
+      let elemTop = bounds.top;
+      if (elemTop < window.innerHeight) {
+        revealElement.classList.add("reveal-active");
+      }
     }
-  }
-});
+  });
 
 // reviews slider
 // vars
