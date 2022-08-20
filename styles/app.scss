@@ -1350,13 +1350,6 @@ main {
           font-weight: bold;
           color: $primary-color;
         }
-        transform: translateY(150px);
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
-        &.reveal-active {
-          opacity: 1;
-          transform: translateY(0px);
-        }
       }
     }
     .about__us {
@@ -1403,8 +1396,11 @@ main {
           position: relative;
           right:100%;
           transition: all 1s ease-in-out;
-          &.reveal-active{
-            right:0;
+          &.reveals{
+            &.reveal-active{
+              right:0;
+            }
+
           }
         }
       }
