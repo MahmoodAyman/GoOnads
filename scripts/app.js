@@ -17,17 +17,17 @@ window.onscroll = function () {
 
 // scroll reveal
 
-  window.addEventListener("scroll", function () {
-    let revealElements = document.querySelectorAll(".reveals");
-    for (let i = 0; i < revealElements.length; i++) {
-      let revealElement = revealElements[i];
-      let bounds = revealElement.getBoundingClientRect();
-      let elemTop = bounds.top;
-      if (elemTop < window.innerHeight) {
-        revealElement.classList.add("reveal-active");
-      }
+window.addEventListener("scroll", function () {
+  let revealElements = document.querySelectorAll(".reveals");
+  for (let i = 0; i < revealElements.length; i++) {
+    let revealElement = revealElements[i];
+    let bounds = revealElement.getBoundingClientRect();
+    let elemTop = bounds.top;
+    if (elemTop < window.innerHeight / 1.1) {
+      revealElement.classList.add("reveal-active");
     }
-  });
+  }
+});
 
 // reviews slider
 // vars
@@ -133,4 +133,33 @@ window.onload = function () {
   });
 };
 
-// send email
+// team slider
+var multipleCardCarousel = document.querySelector("#carouselExampleControls");
+if (window.matchMedia("(min-width: 768px)").matches) {
+  var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+    interval: false,
+  });
+  var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+  var cardWidth = $(".carousel-item").width();
+  var scrollPosition = 0;
+  $("#carouselExampleControls .carousel-control-next").on("click", function () {
+    if (scrollPosition < carouselWidth - cardWidth * 4) {
+      scrollPosition += cardWidth;
+      $("#carouselExampleControls .carousel-inner").animate(
+        { scrollRight: scrollPosition },
+        600
+      );
+    }
+  });
+  $("#carouselExampleControls .carousel-control-prev").on("click", function () {
+    if (scrollPosition > 0) {
+      scrollPosition -= cardWidth;
+      $("#carouselExampleControls .carousel-inner").animate(
+        { scrollRight: scrollPosition },
+        600
+      );
+    }
+  });
+} else {
+  $(multipleCardCarousel).addClass("slide");
+}
