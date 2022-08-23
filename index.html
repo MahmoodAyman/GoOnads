@@ -172,15 +172,15 @@
     <section id="services">
       <div class="wrapper">
         <h3 class="title">خدماتنا</h3>
-        <div class="cols reveals">
+        <div class="cols ">
           <div
-            class="col"
+            class="col reveals"
             ontouchstart="this.classList.toggle('hover');"
           >
             <div class="container">
               <div
                 class="front"
-                style="background-image: url()"
+                style="background-image: url(images/services/مطبوعات.jpg)"
               >
                 <div class="inner">
                   <p>مطبوعات</p>
@@ -200,13 +200,13 @@
             </div>
           </div>
           <div
-            class="col reveal"
+            class="col reveals"
             ontouchstart="this.classList.toggle('hover');"
           >
             <div class="container">
               <div
                 class="front"
-                style="background-image: url()"
+                style="background-image: url(images/services/لافتات.jpg)"
               >
                 <div class="inner">
                   <p>لافتات</p>
@@ -227,14 +227,14 @@
             </div>
           </div>
           <div
-            class="col reveal"
+            class="col reveals"
             ontouchstart="this.classList.toggle('hover');"
           >
             <div class="container">
               <div
                 class="front"
                 style="
-                  background-image: url();
+                  background-image: url(images/services/تسويق-الكتروني.jpg);
                 "
               >
                 <div class="inner">
@@ -254,14 +254,14 @@
             </div>
           </div>
           <div
-            class="col reveal"
+            class="col reveals"
             ontouchstart="this.classList.toggle('hover');"
           >
             <div class="container">
               <div
                 class="front"
                 style="
-                  background-image: url();
+                  background-image: url(images/services/هدايا-دعائية.jpg);
                 "
               >
                 <div class="inner">
@@ -282,14 +282,14 @@
             </div>
           </div>
           <div
-            class="col reveal"
+            class="col reveals"
             ontouchstart="this.classList.toggle('hover');"
           >
             <div class="container">
               <div
                 class="front"
                 style="
-                  background-image: url();
+                  background-image: url(images/services/مؤتمرات.jpg);
                 "
               >
                 <div class="inner">
@@ -310,14 +310,14 @@
             </div>
           </div>
           <div
-            class="col reveal"
+            class="col reveals"
             ontouchstart="this.classList.toggle('hover');"
           >
             <div class="container">
               <div
                 class="front"
                 style="
-                  background-image: url();
+                  background-image: url(images/services/تصميم-مواقع.jpg);
                 "
               >
                 <div class="inner">
@@ -338,14 +338,14 @@
             </div>
           </div>
           <div
-            class="col reveal"
+            class="col reveals"
             ontouchstart="this.classList.toggle('hover');"
           >
             <div class="container">
               <div
                 class="front"
                 style="
-                  background-image: url();
+                  background-image: url(images/services/laser-machinery-metal-cutting.jpg);
                 "
               >
                 <div class="inner">
@@ -512,5 +512,108 @@
     <!-- end reviews section -->
     <script src="scripts/app.js"></script>
     <script src="scripts/bootstrap.bundle.js"></script>
+    <script>
+      ("use strict");
+var testim = document.getElementById("reviews__slider"),
+  reviewDot = Array.prototype.slice.call(
+    document.getElementById("slider-dots").children
+  ),
+  reviewContent = Array.prototype.slice.call(
+    document.getElementById("review-content").children
+  ),
+  leftArrow = document.getElementById("left-arrow"),
+  rightArrow = document.getElementById("right-arrow"),
+  testimSpeed = 4500,
+  currentSlide = 0,
+  currentActive = 0,
+  testimTimer,
+  touchStartPos,
+  touchEndPos,
+  touchPosDiff,
+  ignoreTouch = 30;
+window.onload = function () {
+  // Testim Script
+  function playSlide(slide) {
+    for (var k = 0; k < reviewDot.length; k++) {
+      reviewContent[k].classList.remove("active");
+      reviewContent[k].classList.remove("inactive");
+      reviewDot[k].classList.remove("active");
+    }
+
+    if (slide < 0) {
+      slide = currentSlide = reviewContent.length - 1;
+    }
+
+    if (slide > reviewContent.length - 1) {
+      slide = currentSlide = 0;
+    }
+
+    if (currentActive != currentSlide) {
+      reviewContent[currentActive].classList.add("inactive");
+    }
+    reviewContent[slide].classList.add("active");
+    reviewDot[slide].classList.add("active");
+
+    currentActive = currentSlide;
+
+    clearTimeout(testimTimer);
+    testimTimer = setTimeout(function () {
+      playSlide((currentSlide += 1));
+    }, testimSpeed);
+  }
+
+  leftArrow.addEventListener("click", function () {
+    playSlide((currentSlide += 1));
+  });
+
+  rightArrow.addEventListener("click", function () {
+    playSlide((currentSlide -= 1));
+  });
+
+  for (var l = reviewDot.length - 1; l >= 0; l--) {
+    reviewDot[l].addEventListener("click", function () {
+      playSlide((currentSlide = reviewDot.indexOf(this)));
+    });
+  }
+
+  playSlide(currentSlide);
+
+  // keyboard shortcuts
+  document.addEventListener("keyup", function (e) {
+    switch (e.keyCode) {
+      case 37:
+        leftArrow.click();
+        break;
+
+      case 39:
+        rightArrow.click();
+        break;
+
+      case 39:
+        rightArrow.click();
+        break;
+
+      default:
+        break;
+    }
+  });
+
+  testim.addEventListener("touchstart", function (e) {
+    touchStartPos = e.changedTouches[0].clientX;
+  });
+
+  testim.addEventListener("touchend", function (e) {
+    touchEndPos = e.changedTouches[0].clientX;
+    touchPosDiff = touchStartPos - touchEndPos;
+    if (touchPosDiff > 0 + ignoreTouch) {
+      leftArrow.click();
+    } else if (touchPosDiff < 0 - ignoreTouch) {
+      rightArrow.click();
+    } else {
+      return;
+    }
+  });
+};
+    </script>
   </body>
 </html>

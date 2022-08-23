@@ -108,6 +108,7 @@ header nav .collapse .navbar-nav li ul li a.active {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
 #slogan .container .row {
   display: flex;
@@ -147,8 +148,9 @@ header nav .collapse .navbar-nav li ul li a.active {
   transition: all 0.3s ease-in-out;
 }
 #slogan .container .slogan__text a:hover {
-  background-color: #616161;
+  background-color: white;
   color: #de8900;
+  border: 1px solid #de8900;
 }
 #slogan .container .slogan__image {
   display: flex;
@@ -1406,89 +1408,138 @@ main .container .about__us::nth-child(1) {
 }
 
 .team-members {
+  transform: translateY(150px);
+  transition: all 1s ease-in-out;
   width: 100%;
 }
-.team-members .carousel-item {
-  width: 30%;
+.team-members.reveal-active {
+  transform: translateY(0px);
 }
-.team-members a {
-  text-decoration: none;
-  background-color: #de8900;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
+.team-members .slide-container {
+  max-width: 1120px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding: 40px 0;
 }
-.team-members a:hover {
-  background-color: white;
-  border: 1px solid #de8900;
-  color: #de8900;
-}
-.team-members .carousel-inner {
-  padding: 3em;
+.team-members .slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
 }
 .team-members .card {
-  margin: 0 0.5em;
-  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-  border: none;
+  border-radius: 25px;
+  background-color: #FFF;
+}
+.team-members .image-content,
+.team-members .card-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 10px 14px;
 }
-.team-members .carousel-control-prev,
-.team-members .carousel-control-next {
-  background-color: #616161;
-  width: 5vh;
-  height: 5vh;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
+.team-members .image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
 }
-.team-members .carousel-control-prev:hover,
-.team-members .carousel-control-next:hover {
+.team-members .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #de8900;
+  border-radius: 25px 25px 0 25px;
+}
+.team-members .overlay::before,
+.team-members .overlay::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
   background-color: #de8900;
 }
-.team-members .carousel-control-prev {
-  left: 2%;
+.team-members .overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
 }
-.team-members .carousel-control-next {
-  right: 2%;
+.team-members .card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
 }
-.team-members .card .img-wrapper {
-  max-width: 100%;
-  height: 17em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.team-members .card img {
+.team-members .card-image .card-img {
   height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #de8900;
+}
+.team-members .name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.team-members .description {
+  font-size: 14px;
+  color: #616161;
+  text-align: center;
+}
+.team-members .button {
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #de8900;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.team-members .button:hover {
+  background: white;
+  color: #de8900;
+  border: 1px solid #de8900;
+}
+.team-members .swiper-navBtn {
+  color: #de8900;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.team-members .swiper-navBtn:hover {
+  color: #c87b00;
+}
+.team-members .swiper-navBtn::before,
+.team-members .swiper-navBtn::after {
+  font-size: 35px;
+}
+.team-members .swiper-button-next {
+  right: 2;
+}
+.team-members .swiper-button-prev {
+  left: 2;
+}
+.team-members .swiper-pagination-bullet {
+  background-color: #de8900;
+  opacity: 1;
+}
+.team-members .swiper-pagination-bullet-active {
+  background-color: #c87b00;
 }
 
-@media (min-width: 768px) {
-  .team-members .carousel-item {
-    margin-right: 0;
-    flex: 0 0 33.333333%;
-    display: block;
+@media screen and (max-width: 768px) {
+  .team-members .card {
+    width: 420px !important;
   }
-  .team-members .carousel-inner {
-    display: flex;
+  .team-members .slide-content {
+    margin: 0 10px;
   }
-}
-@media (max-width: 767px) {
-  .team-members .carousel-item {
-    width: 100%;
-  }
-  .team-members .card .img-wrapper {
-    height: 17em;
+  .team-members .swiper-navBtn {
+    display: none;
   }
 }/*# sourceMappingURL=app.css.map */

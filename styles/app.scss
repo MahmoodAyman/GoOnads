@@ -137,6 +137,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
   .container {
     .row {
       display: flex;
@@ -175,8 +176,9 @@ header {
         border-radius: 10px;
         transition: all 0.3s ease-in-out;
         &:hover {
-          background-color: $secondary-color;
+          background-color: white;
           color: $primary-color;
+          border:1px solid $primary-color;
         }
       }
     }
@@ -1479,94 +1481,140 @@ main {
 
 // team members cards slider
 .team-members {
+  transform: translateY(150px);
+  transition: all 1s ease-in-out;
+  &.reveal-active{
+    transform: translateY(0px);
+  }
   width: 100%;
-  .carousel-item{
-    width: 30%;  
-  }
-  a{
-    text-decoration: none;
-    background-color: #de8900;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
+  .slide-container{
+    max-width: 1120px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    &:hover {
-      background-color: white;
-      border: 1px solid $primary-color;
-      color: $primary-color;
-    }
+    padding: 40px 0;
   }
-  .carousel-inner {
-    padding: 3em;
+  .slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
   }
-  .card {
-    margin: 0 0.5em;
-    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-    border: none;
+  .card{
+    border-radius: 25px;
+    background-color: #FFF;
+  }
+  .image-content,
+  .card-content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
+    padding: 10px 14px;
   }
-  .carousel-control-prev,
-  .carousel-control-next {
-    background-color: $secondary-color;
-    width: 5vh;
-    height: 5vh;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    &:hover {
-      background-color: $primary-color;
-    }
+  .image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
   }
-  .carousel-control-prev{
-    left: 2%;
-  }
-  .carousel-control-next{
-    right: 2%;
-  }
-
-  .card .img-wrapper {
-    max-width: 100%;
-    height: 17em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .card img {
+  .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
     height: 100%;
+    width: 100%;
+    background-color: $primary-color;
+    border-radius: 25px 25px 0 25px;
   }
-}
-@media (min-width: 768px) {
-  .team-members {
-    .carousel-item {
-      margin-right: 0;
-      flex: 0 0 33.333333%;
-      display: block;
-      
-    }
-    .carousel-inner {
-      display: flex;
-    }
+  .overlay::before,
+  .overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: $primary-color;
   }
+  .overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+  }
+  .card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+  }
+  .card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid $primary-color;
+  }
+  .name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+  .description{
+    font-size: 14px;
+    color: $secondary-color;
+    text-align: center;
+  }
+  .button{
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: $primary-color;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .button:hover{
+    background: white;
+    color:$primary-color;
+    border: 1px solid $primary-color;
+  }
+  
+  .swiper-navBtn{
+    color: $primary-color;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  .swiper-navBtn:hover{
+    color: $hover-color;
+  }
+  .swiper-navBtn::before,
+  .swiper-navBtn::after{
+    font-size: 35px;
+  }
+  .swiper-button-next{
+    right: 2;
+  }
+  .swiper-button-prev{
+    left: 2;
+  }
+  .swiper-pagination-bullet{
+    background-color: $primary-color;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: $hover-color;
+  }
+  
 }
-@media (max-width: 767px) {
-  .team-members {
-    .carousel-item{
-      width: 100%;
+@media screen and (max-width: 768px) {
+  .team-members{
+    .card{
+      width: 420px !important ;
     }
-    .card .img-wrapper {
-      height: 17em;
+    .slide-content{
+      margin: 0 10px;
+    }
+    .swiper-navBtn{
+      display: none;
     }
   }
 }
