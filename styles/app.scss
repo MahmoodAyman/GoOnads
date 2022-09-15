@@ -149,7 +149,7 @@ header {
       // line-height: 2;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       h1 {
         line-height: 2;
         font-size: 7rem;
@@ -715,7 +715,7 @@ header {
 }
 
 .reviews__slider .cont > div.inactive {
-  opacity: 1;
+  opacity: 0;
 }
 
 .reviews__slider .cont > div.active {
