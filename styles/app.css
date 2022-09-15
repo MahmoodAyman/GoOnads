@@ -942,6 +942,12 @@ footer .logo p {
   color: #616161;
   margin-top: 5px;
 }
+footer .logo .tax__number {
+  line-height: normal;
+}
+footer .logo .tax__number .head {
+  font-size: 15px !important;
+}
 footer .contact__us__footer .contacts {
   display: flex;
   flex-direction: column;

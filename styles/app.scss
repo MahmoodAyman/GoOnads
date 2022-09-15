@@ -958,6 +958,12 @@ footer {
       color: $secondary-color;
       margin-top: 5px;
     }
+    .tax__number{
+      line-height: normal;
+      .head{
+        font-size: 15px !important;
+      }
+    }
   }
   .contact__us__footer {
     .contacts {
